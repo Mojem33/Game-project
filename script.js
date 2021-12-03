@@ -6,7 +6,7 @@ const startButton = document.querySelector('.startButton');
 
 let lastHole;
 let timeUp = false;
-let timelimit = 20000;
+let timeLimit = 20000;
 let score = 0;
 let countdown;
 
