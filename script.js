@@ -1,27 +1,27 @@
 const holes = document.querySelectorAll('.hole');
 const scoreBoard = document.querySelector('.score');
-const moles = document.querySelectorAll('.moles');
+const moles = document.querySelectorAll('.mole');
 const countdownBoard = document.querySelector('.countdown');
 const startButton = document.querySelector('.startButton');
 
 let lastHole;
-let timeUp= false;
+let timeUp = false;
 let timelimit = 20000;
 let score = 0;
 let countdown;
 
-function picRandomHole(holes) {
-    const randomHole = MAth.floor(Math.random() * holes.length);
+function pickRandomHole(holes) {
+    const randomHole = Math.floor(Math.random() * holes.length);
     const hole = holes[randomHole];
-    if(holes === lastHole){
-        return picRandomHole(hole);
+    if(hole === lastHole){
+        return pickRandomHole(holes);
     }
     lastHole = hole;
     return hole;
 }
 function popOut(){
     const time = Math.random()* 1300 + 400;
-    const hole = picRandomHole(holes);
+    const hole = pickRandomHole(holes);
     hole.classList.add('up');
     setTimeout(() => {
         hole.classList.remove('up');
@@ -48,7 +48,7 @@ function popOut(){
        if (countdown <0){
            countdown =0;
            clearInterval(startCountdown);
-           countdownBoard.textContent = 'Times Up!! Now You can EAT!'
+           countdownBoard.textContent = 'Game Over!! Now You can EAT!';
        }
     } ,1000);
 }
@@ -56,10 +56,10 @@ startButton.addEventListener('click' , startGame);
 
 function paw(e){
     score++;
-    this.style.backgroundImage = 'url'("fish1.png");
+    this.style.backgroundImage = 'url("fish1.png")';
     this.style.pointerEvents = 'none';
     setTimeout(() => {
-        this.style.backgroundImage = 'url'("fishjump2.png")
+        this.style.backgroundImage = 'url("fishjump2.png")';
         this.style.pointerEvents = 'all';
     }, 800);
     scoreBoard.textContent = score;
