@@ -31,7 +31,7 @@ function popOut(){
 
 
  function startGame(){
-    countdown  = 20;
+    countdown  = 60;
     scoreBoard.textContent = 0;
     scoreBoard.getElementsByClassName.display = 'block';
     countdownBoard.textContent = countdown;
@@ -65,3 +65,7 @@ function paw(e){
     scoreBoard.textContent = score;
 }
 moles.forEach(mole => mole.addEventListener('click', paw));
+function level(up){
+    score == 100 and level == 1;
+    leve+= 1;
+}
