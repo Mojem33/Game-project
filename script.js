@@ -6,7 +6,7 @@ const startButton = document.querySelector('.startButton');
 
 let lastHole;
 let timeUp = false;
-let timeLimit = 20000;
+let timeLimit = 60000;
 let score = 0;
 let countdown;
 
@@ -51,6 +51,12 @@ function popOut(){
            countdownBoard.textContent = 'Game Over!! Now You can EAT!';
        }
     } ,1000);
+     let startScore = setValue(() =>{
+         score = 0
+         if(score == 100 and level == 1;
+            level += 1;
+}
+
 }
 startButton.addEventListener('click' , startGame);
 
@@ -65,7 +71,3 @@ function paw(e){
     scoreBoard.textContent = score;
 }
 moles.forEach(mole => mole.addEventListener('click', paw));
-function level(up){
-    score == 100 and level == 1;
-    leve+= 1;
-}
